@@ -1,5 +1,5 @@
 import './App.css';
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import AppRouter from './AppRouter';
@@ -15,8 +15,9 @@ function App() {
 
     AOS.refresh();   // Ensure AOS animations are refreshed on route/component changes
   }, []);
+
   return (
-      <AppRouter />
+    <AppRouter />
   );
 }
 
