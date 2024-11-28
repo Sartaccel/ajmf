@@ -1,0 +1,597 @@
+/* #registration {
+   height: 120vh; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   overflow: hidden; 
+}
+@media only screen and (max-width: 1000px) {
+   #registration {
+       height: auto; 
+       padding: 20px 0;
+   }
+}
+.container .vlist {
+   position: relative;
+   z-index: 2;
+   background-color: #D8FAE9;
+   border-radius: 1%;
+   padding: 20px;
+   overflow: hidden;
+}
+
+.circle-1,
+.circle-2 {
+   background: linear-gradient(to right bottom, #00ffc3, rgba(255, 255, 255, 0.1));
+   height: 25rem;
+   width: 25rem;
+   position: absolute;
+   border-radius: 50%;
+   z-index: -1;
+}
+
+.circle-1 {
+   top: -10%;
+   right: -10%;
+}
+
+.circle-2 {
+   bottom: -10%;
+   left: -10%;
+}
+
+.circle-01,
+.circle-02 {
+   background: #1FAA89;
+   height: 25rem;
+   width: 25rem;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.circle-01 {
+   top: -50%;
+   left: -35%;
+   background: linear-gradient(to left top, #00ffc3, rgba(255, 255, 255, 0.1));
+}
+
+.circle-02 {
+   bottom: -50%;
+   right: -35%;
+   background: linear-gradient(to right bottom, #00ffc3, rgba(255, 255, 255, 0.1));
+}
+
+.search-wrapper {
+   position: relative;
+   width: 100%;
+   height: 3.5%;
+   background: #D8FAE9;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.search-wrapper input {
+   width: 100%;
+   outline: none;
+   border: none;
+   background: #fff;
+   padding: 6px;
+   height: 3.5%;
+   border-radius: 10%;
+   font-size: 14px;
+   padding-left: 3.7%;
+}
+
+.search-wrapper input::placeholder {
+   color: #bbb;
+}
+
+.vollist {
+   position: relative;
+   height: 350px;
+   overflow-y: scroll;
+   padding-right: 15px;
+}
+
+.vollist::-webkit-scrollbar {
+   width: 8px;
+}
+
+.vollist::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+
+.vollist::-webkit-scrollbar-thumb {
+   background: #888;
+   border-radius: 4px;
+}
+
+.vollist::-webkit-scrollbar-thumb:hover {
+   background: #555;
+}
+
+.vollist .block {
+   position: relative;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   padding: 15px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+   cursor: pointer;
+}
+
+.vollist .block .imgbx {
+   position: relative;
+   width: 70px;
+   height: 70px;
+   overflow: hidden;
+   border-radius: 50%;
+   margin-right: 10px;
+}
+
+.vollist .block .details {
+   position: relative;
+   width: 100%;
+}
+
+.vollist .block .details h4 {
+   font-size: 1.1em;
+   font-weight: 600;
+   color: #111;
+}
+
+.vollist .block .details p {
+   font-size: 0.75em;
+   color: #aaa;
+}
+.custom-rounded-pill {
+   border-radius: 25%; /* Creates the pill shape */
+   /*clip-path: inset(0 0 0 0 round 50px); }/* Adjust the 25px value as needed */
+/*/
+
+/* @media screen and (max-width: 1000px) {
+   .volunteersheading {
+     padding-top: 30px;
+    
+   }
+} */
+
+/* .volunteerS {
+   width: 100%;
+   height: 100vh;
+} */
+
+.aboutV {
+   min-height: 120vh;
+   max-height: 3000px;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+
+.bubbles {
+   position: absolute;
+   z-index: 0;
+   overflow: hidden;
+}
+
+.bubble {
+   position: absolute;
+   bottom: -100px;
+   width: 40px;
+   height: 40px;
+   background: linear-gradient(to right bottom, #00ffc3, rgba(255, 255, 255, 0.1));
+   border-radius: 50%;
+   opacity: 0.5;
+   animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+   width: 40px;
+   height: 40px;
+   left: 10%;
+   animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+   width: 20px;
+   height: 20px;
+   left: 20%;
+   animation-duration: 5s;
+   animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+   width: 50px;
+   height: 50px;
+   left: 35%;
+   animation-duration: 7s;
+   animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+   width: 80px;
+   height: 80px;
+   left: 50%;
+   animation-duration: 11s;
+   animation-delay: 0s;
+}
+
+.bubble:nth-child(5) {
+   width: 35px;
+   height: 35px;
+   left: 55%;
+   animation-duration: 6s;
+   animation-delay: 1s;
+}
+
+.bubble:nth-child(6) {
+   width: 45px;
+   height: 45px;
+   left: 65%;
+   animation-duration: 8s;
+   animation-delay: 3s;
+}
+
+.bubble:nth-child(7) {
+   width: 90px;
+   height: 90px;
+   left: 70%;
+   animation-duration: 12s;
+   animation-delay: 2s;
+}
+
+.bubble:nth-child(8) {
+   width: 25px;
+   height: 25px;
+   left: 80%;
+   animation-duration: 6s;
+   animation-delay: 2s;
+}
+
+.bubble:nth-child(9) {
+   width: 15px;
+   height: 15px;
+   left: 70%;
+   animation-duration: 5s;
+   animation-delay: 1s;
+}
+
+.bubble:nth-child(10) {
+   width: 90px;
+   height: 90px;
+   left: 25%;
+   animation-duration: 10s;
+   animation-delay: 4s;
+}
+
+@keyframes rise {
+   0% {
+      bottom: -100px;
+      transform: translateX(0);
+   }
+
+   50% {
+      transform: translate(100px);
+   }
+
+   100% {
+      bottom: 1080px;
+      transform: translateX(-200px);
+   }
+}
+
+.card-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   perspective: 1000px;
+   position: relative;
+   z-index: 1;
+}
+
+.Vcard {
+   width: 100%;
+   height: 100%;
+   background: rgba(255, 255, 255, 0.5);
+   border-radius: 20px;
+   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+   transition: transform 0.6s;
+   transform-style: preserve-3d;
+   overflow: hidden;
+   position: relative;
+}
+
+.Vcard::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+   transform: translateY(-100%);
+   transition: transform 0.6s;
+}
+
+.Vcard:hover::before {
+   transform: translateY(100%);
+}
+
+.card-contentvol {
+   padding: 20px;
+   transform-style: preserve-3d;
+}
+
+.card-titlevol {
+   font-size: 24px;
+   margin-bottom: 10px;
+   transform: translateZ(50px);
+}
+
+.card-descriptionvol {
+   font-size: 14px;
+   color: #ccc;
+   margin-bottom: 20px;
+   transform: translateZ(30px);
+}
+
+.card-imagevol {
+   width: 100%;
+   height: 300px;
+   background-size: cover;
+   background-position: center;
+   border-radius: 10px;
+   margin-bottom: 20px;
+   transform: translateZ(70px);
+}
+
+.card-actionsvol {
+   display: flex;
+   justify-content: space-between;
+   transform: translateZ(40px);
+}
+
+.Vbtn {
+   padding: 10px 20px;
+   border-radius: 5px;
+   font-size: 14px;
+   text-decoration: none;
+   transition: all 0.3s;
+   border: none;
+   cursor: pointer;
+}
+
+.btn-primary {
+   background-color: #00ffff;
+   color: #000;
+}
+
+.btn-secondary {
+   background-color: transparent;
+   color: #00ffff;
+   border: 1px solid #00ffff;
+}
+
+.Vbtn:hover {
+   transform: scale(1.05) translateZ(5px);
+   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.container .vlist {
+   position: relative;
+   z-index: 2;
+   background: rgba(255, 255, 255, 0.5);
+   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+   border-radius: 20px;
+   transition: transform 0.6s;
+   transform-style: preserve-3d;
+   padding: 20px;
+   overflow: hidden;
+}
+
+.container .vlist::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+   transform: translateY(-100%);
+   transition: transform 0.6s;
+}
+
+.container .vlist:hover::before {
+   transform: translateY(100%);
+}
+
+.circle-1,
+.circle-2 {
+   background: linear-gradient(to right bottom, #00ffc3, rgba(255, 255, 255, 0.1));
+   height: 25rem;
+   width: 25rem;
+   position: absolute;
+   border-radius: 50%;
+   z-index: -1;
+}
+
+.circle-1 {
+   top: -10%;
+   right: -10%;
+}
+
+.circle-2 {
+   bottom: -10%;
+   left: -10%;
+}
+
+.circle-01,
+.circle-02 {
+   background: #00ffc3;
+   height: 15rem;
+   width: 15rem;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.circle-03 {
+   background: linear-gradient(to right bottom, #00ffc3, rgba(255, 255, 255, 0.1));
+   height: 25rem;
+   width: 25rem;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.circle-04 {
+   background: linear-gradient(to right bottom, #00ffc3, rgba(255, 255, 255, 0.1));
+   height: 20rem;
+   width: 20rem;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.circle-05 {
+   background: linear-gradient(to right bottom, #00ffc3, rgba(255, 255, 255, 0.1));
+   height: 10rem;
+   width: 10rem;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.circle-01 {
+   top: 10%;
+   left: 1%;
+   background: linear-gradient(to left top, #00ffc3, rgba(255, 255, 255, 0.1));
+}
+
+.circle-02 {
+   bottom: 10%;
+   right: 5%;
+   background: linear-gradient(to right bottom, #00ffc3, rgba(255, 255, 255, 0.1));
+}
+
+.circle-03 {
+   top: 10%;
+   left: 1%;
+   background: linear-gradient(to left top, #00ffc3, rgba(255, 255, 255, 0.1));
+}
+
+.circle-04 {
+   top: 10%;
+   left: 1%;
+   background: linear-gradient(to left top, #00ffc3, rgba(255, 255, 255, 0.1));
+}
+
+.circle-05 {
+   top: 10%;
+   left: 1%;
+   background: linear-gradient(to left top, #00ffc3, rgba(255, 255, 255, 0.1));
+}
+
+.search-wrapper {
+   position: relative;
+   width: 100%;
+   height: 3.5%;
+   background: rgba(255, 255, 255, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px;
+}
+
+.search-wrapper input {
+   width: 100%;
+   outline: none;
+   border: none;
+   padding: 6px;
+   height: 3.5%;
+   border-radius: 10%;
+   font-size: 14px;
+   padding-left: 3.7%;
+   background: rgba(255, 255, 255, 0.5);
+   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.search-wrapper input::placeholder {
+   color: #bbb;
+}
+
+.vollist {
+   position: relative;
+   height: 389px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   padding-right: 15px;
+}
+
+.vollist::-webkit-scrollbar {
+   width: 1%;
+}
+
+.vollist::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+
+.vollist::-webkit-scrollbar-thumb {
+   background: rgba(195, 195, 195, 0.5);
+   /* border-radius: 10%; */
+}
+
+.vollist::-webkit-scrollbar-thumb:hover {
+   background: rgba(195, 195, 195, 0.5);
+}
+
+.vollist .block {
+   position: relative;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   padding: 15px;
+   border-bottom: 1px solid rgba(195, 195, 195, 0.5);
+   cursor: pointer;
+}
+
+.vollist .block .imgbx {
+   position: relative;
+   width: 70px;
+   height: 70px;
+   overflow: hidden;
+   border-radius: 50%;
+   margin-right: 10px;
+}
+
+.vollist .block .details {
+   position: relative;
+   width: 50%;
+}
+
+.vollist .block .details h4 {
+   font-size: 1.1em;
+   font-weight: 600;
+   color: #111;
+}
+
+.vollist .block .details p {
+   font-size: 0.75em;
+   color: #aaa;
+}
+
+.custom-rounded-pill {
+   border-radius: 25%;
+   /* Creates the pill shape */
+   clip-path: inset(0 0 0 0 round 50px);
+   /* Adjust the 25px value as needed */
+}
+
+@media screen and (max-width: 1000px) {
+   .volunteersheading {
+      padding-top: 30px;
+   }
+}

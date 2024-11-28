@@ -1,0 +1,651 @@
+/* hero section*/
+.hero-section {
+    background: url(../images/cristi-tohatan-XIBIC21QeZQ-unsplash\ \(1\).jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, #42FFFF 0%, #0565FF 100%);
+    background-size: 200% 200%;
+    animation: ani_gradient 5.8s ease infinite;
+}
+
+@keyframes ani_gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.bg-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.carousel {
+    position: relative;
+    width: 90%;
+    height: 75%;
+    margin: 10px;
+    top: 5%;
+    border-radius: 40px;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    z-index: 2;
+    backdrop-filter: blur(10rem);
+}
+
+.carousel-caption {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 13%;
+    right: 1%;
+}
+
+.circle2 {
+    bottom: 1%;
+    left: 1%;
+}
+
+.carousel-inner {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 50% 50%);
+}
+
+.carousel-item.active {
+    clip-path: circle(150% at 50% 50%);
+    transition: 0.5s;
+    transition-property: clip-path;
+}
+
+.carousel-item img {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    font-weight: 500;
+    text-shadow: 0 2px 0px black;
+}
+
+.carousel-caption span {
+    color: var(--primary-color);
+}
+
+h2.text-main {
+    visibility: hidden;
+}
+
+@media screen and (max-width:435px) {
+
+    .hero-section,
+    .hero-section::before {
+        height: 50vh;
+    }
+
+    .carousel {
+        top: 10%;
+    }
+
+    .circle1 {
+        height: 10rem;
+        width: 10rem;
+        top: 10%;
+    }
+
+    .circle2 {
+        height: 10rem;
+        width: 10rem;
+        bottom: 50%;
+    }
+
+    .carousel-indicators button {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+
+    h2.text-main {
+        visibility: visible;
+    }
+}
+
+/* about section*/
+.container .card {
+    position: relative;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.container .card .card-body {
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#team .card-body {
+    padding: 10px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.volt {
+    background-image: url(../images/Volunteer-banner-drak.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.services {
+    background-color: rgb(87, 182, 168);
+}
+
+.card {
+    min-height: 100px;
+    min-width: 100px;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: -8px 6px 89px -65px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -8px 6px 89px -65px rgba(0, 0, 0, 0.75);
+    box-shadow: -8px 6px 89px -65px rgba(0, 0, 0, 0.75);
+    ;
+}
+
+.card p {
+    color: gray;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.circle {
+    height: 70px;
+    width: 70px;
+    background-color: lightgray;
+    color: black;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+
+}
+
+
+.card:hover .circle {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.card-img-overlay {
+    padding-right: 1000px;
+}
+
+/* team section */
+#team {
+    background: linear-gradient(to left top, #0dbc93, rgba(255, 255, 255, 0.1));
+}
+
+.ourteamH {
+    font-size: 150px;
+    text-align: center;
+}
+
+@media screen and (max-width: 380px) {
+    .servicecard {
+        /* font-size: 15px; */
+        overflow-y: scroll;
+        height: 170px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .ourteamH {
+        margin-top: -50px;
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ourteamH {
+        margin-top: -50px;
+        font-size: 100px;
+    }
+}
+
+.visionmission {
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+    .visionmission {
+        padding-top: 0px;
+    }
+
+    .servicepage {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .visionmission {
+        font-size: 13px;
+    }
+
+}
+
+.team {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.team .teamicon {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.team .teamicon .imgBx {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 4px #222,
+        0 0 0 6px #fff;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 340px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.team .teamicon .imgBx.active {
+    box-shadow: 0 0 0 6px #222,
+        0 0 0 12px #ff1d50;
+}
+
+.team .teamicon .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+    transition: 0.5s;
+    filter: grayscale(1);
+}
+
+.team .teamicon .imgBx.active img {
+    filter: grayscale(0);
+}
+
+.teamcontent {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamcontent::before {
+    content: '';
+    position: absolute;
+    inset: 60px;
+    border: 4px solid transparent;
+    border-left: 4px solid #2196f3;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animate_01 5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animate_01 {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.teamcontent::after {
+    content: '';
+    position: absolute;
+    inset: 120px;
+    border: 4px solid transparent;
+    border-left: 4px solid #ff1d50;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animate_02 2.5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animate_02 {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.contentBx {
+    position: absolute;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBx.active {
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.teamcontent .teamcard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.teamcontent .teamcard .imgBx {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.teamcontent .teamcard .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teamcontent .teamcard .textBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.teamcontent .teamcard .textBx h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1em;
+    text-align: center;
+}
+
+.teamcontent .teamcard .textBx h2 span {
+    font-size: 0.85em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.teamcontent .teamcard .textBx p {
+    font-size: 0.70em;
+}
+
+@media screen and (max-width: 500px) {
+    .team {
+        padding: 10px;
+        width: 350px;
+        /* Adjusting width for smaller screens */
+        height: 350px;
+        /* Adjusting height for smaller screens */
+    }
+
+
+    .team .teamicon .imgBx {
+        width: 65px;
+        /* Adjusting icon size */
+        height: 65px;
+        /* Adjusting icon size */
+        transform: rotate(calc(360deg / 8 * var(--i)));
+        transform-origin: 200px;
+        /* Adjusting transform-origin */
+    }
+
+    .team .teamicon .imgBx img {
+        transform: rotate(calc(-360deg / 8 * var(--i)));
+    }
+
+    .teamcontent::before {
+        inset: 35px;
+        /* Adjusting inset */
+    }
+
+    .teamcontent::after {
+        inset: 70px;
+        /* Adjusting inset */
+    }
+
+    .teamcontent .teamcard .imgBx {
+        width: 90px;
+        /* Adjusting card image size */
+        height: 90px;
+        /* Adjusting card image size */
+    }
+
+    .teamcontent .teamcard .textBx h2 {
+        font-size: 1em;
+        /* Adjusting text size */
+    }
+
+    .teamcontent .teamcard .textBx h2 span {
+        font-size: 0.7em;
+        /* Adjusting span text size */
+    }
+
+    .teamcontent .teamcard .textBx p {
+        margin-top: -7px;
+        font-size: 0.6em;
+        /* Adjusting paragraph text size */
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .team {
+        padding: 5px;
+        width: 300px;
+        /* Adjusting width for smaller screens */
+        height: 300px;
+        /* Adjusting height for smaller screens */
+    }
+
+    .team .teamicon .imgBx {
+        width: 55px;
+        /* Smaller icon size */
+        height: 55px;
+        /* Smaller icon size */
+        transform: rotate(calc(360deg / 8 * var(--i)));
+        transform-origin: 173px;
+        /* Adjusting transform-origin */
+    }
+
+    .team .teamicon .imgBx img {
+        transform: rotate(calc(-360deg / 8 * var(--i)));
+    }
+
+    .teamcontent::before {
+        inset: 30px;
+        /* Adjusting inset */
+    }
+
+    .teamcontent::after {
+        inset: 60px;
+        /* Adjusting inset */
+    }
+
+    .teamcontent .teamcard .imgBx {
+        width: 80px;
+        /* Smaller card image */
+        height: 80px;
+        /* Smaller card image */
+    }
+
+    .teamcontent .teamcard .textBx h2 {
+        font-size: 0.95em;
+        /* Smaller text size */
+    }
+
+    .teamcontent .teamcard .textBx h2 span {
+        font-size: 0.7em;
+        /* Smaller span text size */
+    }
+
+    .teamcontent .teamcard .textBx p {
+        margin-top: -6px;
+        font-size: 0.55em;
+        /* Smaller paragraph text size */
+    }
+}
+
+
+
+
+@media screen and (max-width: 350px) {
+    .team {
+        padding: 5px;
+        width: 250px;
+        /* Adjusting width for smaller screens */
+        height: 250px;
+        /* Adjusting height for smaller screens */
+    }
+
+    .team .teamicon .imgBx {
+        width: 45px;
+        /* Smaller icon size */
+        height: 45px;
+        /* Smaller icon size */
+        transform: rotate(calc(360deg / 8 * var(--i)));
+        transform-origin: 140px;
+        /* Adjusting transform-origin */
+    }
+
+    .team .teamicon .imgBx img {
+        transform: rotate(calc(-360deg / 8 * var(--i)));
+    }
+
+    .teamcontent::before {
+        inset: 25px;
+        /* Adjusting inset */
+    }
+
+    .teamcontent::after {
+        inset: 50px;
+        /* Adjusting inset */
+    }
+
+    .teamcontent .teamcard .imgBx {
+        width: 70px;
+        /* Smaller card image */
+        height: 70px;
+        /* Smaller card image */
+    }
+
+    .teamcontent .teamcard .textBx h2 {
+        font-size: 0.85em;
+        /* Smaller text size */
+    }
+
+    .teamcontent .teamcard .textBx h2 span {
+        font-size: 0.6em;
+        /* Smaller span text size */
+    }
+
+    .teamcontent .teamcard .textBx p {
+        margin-top: -6px;
+        font-size: 0.5em;
+        /* Smaller paragraph text size */
+    }
+}

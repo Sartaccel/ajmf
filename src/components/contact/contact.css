@@ -1,0 +1,89 @@
+ .contact-form {
+  background-color: aliceblue;
+  border-radius: 30px;
+}
+
+.contact-info {
+  padding: 20px;
+  background-color: lightgray;
+}
+
+
+.form-check-label {
+  color: rgb(56, 67, 76);
+}
+
+ .btn btn-outline-danger rounded-pill shadow me-3 px-5 bg-danger {
+  color: white;
+} 
+
+#icon {
+  background: #37d7a7;  
+  border-radius: 50%;
+  font-size: 25px;
+  height:30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 10px;
+    border: 2px solid #00ffc3;  
+    padding: 1px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.conabt{
+  overflow: hidden;
+}
+.offadd{
+  background-color: #61ffdf;
+  position: relative;
+}
+.cle{
+  border-radius: 50%;
+  background: linear-gradient(145deg, transparent 20%, #43c8a5);
+  position: absolute;
+}
+.cle.one{
+  width: 130px;
+  height: 130px;
+  top: 180px;
+  right: 50px;
+}.cle.two{
+  width: 80px;
+  height: 80px;
+  top: 80px;
+  right: 30px;
+}
+.cle.three{
+  width: 130px;
+  height: 130px;
+  top: 130px;
+  left: 10px;
+}.cle.four{
+  width: 80px;
+  height: 80px;
+  top: 280px;
+  left: 80px;
+}
+@media screen and (max-width:991px){
+  .cle.one{
+    right: -30px;
+  }.cle.two{
+    top: 30px;
+    right: 10px;
+  }
+  .cle.three{
+    top: 130px;
+    left: -80px;
+  }.cle.four{
+    top: 350px;
+    left: 80px;
+  }
+}

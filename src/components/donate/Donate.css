@@ -1,0 +1,83 @@
+/*   
+  @media (max-width: 1000px) {
+    .col-auto {
+     display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      
+      font-size: 12px;
+    }   
+} */
+
+    /*.form-check-label {
+      padding-top: 0;
+      font-size: 18px;
+    }
+
+    .form-check-input {
+      width: 0px;
+      height: 30px;
+      margin-bottom: 10px;
+    }*/
+
+    /* img {
+      width: 75px;
+      height: 45px;
+      padding-left: 30px;
+      
+    }
+  }   */
+/* #donatesection{
+  /* background-color:#ACE1AF; */
+  /* background-color: #40bb40; */
+  /* background-color: rgb(181, 32, 101);
+}  */
+.donatescroll {
+  position: relative;
+  animation: upDown 2s infinite;
+  margin-bottom: 50px;
+}
+
+.donatescroll1 {
+  position: relative;
+  animation: downUp 2s infinite;
+  margin-bottom: 50px;
+}
+
+@keyframes upDown {
+  0% {
+      top: 0;
+  }
+  50% {
+      top: 50px;
+  }
+  100% {
+      top: 0;
+  }
+}
+
+@keyframes downUp {
+  0% {
+      top: 50px;
+  }
+  50% {
+      top: 0;
+  }
+  100% {
+      top: 50px;
+  }
+}
+
+
+#background-section{
+  
+    background-image: url('../images/donate\ bg1.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+   
+    color: #fff; /* Adjust text color for readability */
+  
+  
+}
