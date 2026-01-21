@@ -1,0 +1,82 @@
+/* Navbar.css */
+
+/* Remove text decoration for footer links */
+#footer {
+    /* height: 250px; */
+}
+
+.footer-link {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: transparent;
+}
+
+.footer-link:hover {
+    text-decoration: none;
+}
+
+/* Ensure email link also has no text decoration */
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+.Twitter {
+    background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7, #833ab4);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.footer-link:hover::after,
+.footer-link.hover-effect:hover::after {
+    transform: scaleX(1);
+    /* Show underline on hover */
+}
+
+/* Footer Link Styles */
+.footer-link {
+    position: relative;
+    text-decoration: none;
+    color: #bbf805;
+    /* Initial color */
+    display: inline-block;
+    /* Ensure the element has a block-like behavior */
+    margin-right: 20px;
+    /* Optional: Add some spacing between links */
+    transition: color 0.3s ease-in-out;
+    /* Smooth transition for color change */
+}
+
+.footer-link:hover {
+    background: linear-gradient(90deg, rgb(33, 255, 255), rgb(78, 255, 158) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Position underline just below the text */
+    width: 0%;
+    height: 2px;
+    /* Underline thickness */
+    background: linear-gradient(90deg, rgb(33, 255, 255), rgb(78, 255, 158) 60%);
+    /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-link:hover::after,
+.footer-link.hover-effect:hover::after {
+    width: 100%;
+}
+
+.footer-link:hover,
+.footer-link.hover-effect:hover {
+    color: rgb(0, 217, 255);
+    /* Change text color on hover */
+}

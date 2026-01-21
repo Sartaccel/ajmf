@@ -1,0 +1,375 @@
+:root {
+    --primary-color: rgb(255, 49, 49);
+    /* Correct syntax for defining variables */
+    --secondary-color: rgb(0, 115, 255);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    padding: 0px 20px;
+    background-color: #fff;
+}
+
+.dropdown-menu {
+    width: 270px;
+    line-height: 35px;
+}
+
+@media screen and (max-width:991px) {
+    .dropdown-menu {
+        width: 100%;
+    }
+}
+
+.Now {
+    background-color: var(--primary-color);
+    /* Example gradient background */
+}
+
+.Now:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    background-color: var(--primary-color);
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navLink {
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    color: rgb(97, 95, 95);
+}
+
+.navLink:hover,
+.navLink.active {
+    background: linear-gradient(90deg, rgb(33, 255, 229), rgb(76, 76, 255) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+@media (min-width:991px) {
+    .navLink::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, rgb(33, 188, 255)50%, rgb(76, 76, 255) 50%);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navLink:hover::before,
+    .navLink.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.donatelink {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+    cursor: default;
+}
+
+@media screen and (max-width:991px) {
+    .donatelink {
+        visibility: visible;
+        display: block;
+        pointer-events: visible;
+        cursor: pointer;
+    }
+}
+
+.gif {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+    cursor: default;
+}
+
+@media screen and (max-width:991px) {
+    .gif {
+        visibility: visible;
+        display: block;
+        pointer-events: visible;
+        cursor: pointer;
+        display: flex;
+    }
+}
+
+.btn-flip {
+    opacity: 1;
+    outline: 0;
+    color: #ffffff;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    /* font-family: 'Open Sans'; */
+    text-transform: uppercase;
+}
+
+.btn-flip:hover::after {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+
+.btn-flip:hover::before {
+    opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
+}
+
+.btn-flip::after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #000000;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    background: #fe9898;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.btn-flip::before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: #ffffff;
+    display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    transition: 0.5s;
+    position: relative;
+    background: #e53939;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+}
+
+@media screen and (max-width:991px) {
+    .btn-flip {
+        visibility: hidden;
+    }
+}
+
+/* whatsapp */
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    /* Ensure it appears above other elements */
+    width: 60px;
+    /* Adjust size as needed */
+    height: 60px;
+    /* Adjust size as needed */
+    border-radius: 50%;
+    /* Make it circular */
+    background-color: #25d366;
+    display: block;
+    transition: all .5s ease;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-right: none;
+    color: #fff;
+    bottom: 20px;
+    right: 20px;
+    border: 0;
+    line-height: 50px;
+}
+
+.whatsapp-link i {
+    font-size: 33px;
+    font-weight: 500;
+}
+
+.whatsapp-link:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    -webkit-animation: pluse-border 1500ms ease-out infinite;
+    animation: pluse-border 1500ms ease-out infinite;
+}
+
+.whatsapp-link:focus {
+    border: none;
+    outline: none;
+}
+
+/* pluse-border animation */
+@keyframes pluse-border {
+
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.register-link {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    /* Ensure it appears above other elements */
+    width: 60px;
+    /* Adjust size as needed */
+    height: 60px;
+    /* Adjust size as needed */
+    border-radius: 50%;
+    /* Make it circular */
+    background-color: #ffffff;
+    /* WhatsApp green color */
+    /* transition: transform 0.2s ease-in-out; */
+    animation: rotate 3s infinite;
+    /* Smooth transition for the bounce effect */
+    /* Apply bounce animation infinitely */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    font-weight: 500;
+}
+
+@keyframes rotate {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.register-link:before {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    -webkit-animation: pluse-round 1500ms ease-out infinite;
+    animation: pluse-round 1500ms ease-out infinite;
+}
+
+/* pluse-border animation */
+@keyframes pluse-round {
+
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+#progress {
+    position: fixed;
+    top: 100px;
+    right: 5px;
+    height: 50px;
+    width: 50px;
+    z-index: 9999;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color: #001a2e;
+}
+
+
+/* Navbar.css */
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 50px;
+    font-size: 20px;
+}
+.navLink {
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    color: rgb(97, 95, 95);
+}
+
+.navLink:hover,
+.navLink.active {
+    background: linear-gradient(90deg, rgb(33, 255, 229), rgb(76, 76, 255) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (min-width:991px) {
+    .navLink::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, rgb(33, 188, 255)50%, rgb(76, 76, 255) 50%);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navLink:hover::before,
+    .navLink.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}

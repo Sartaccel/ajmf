@@ -1,0 +1,19 @@
+Link {
+    text-decoration: none;
+}
+
+h2.text-invisible {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 435px) {
+    h2.text-invisible {
+        color: rgb(0, 255, 132);
+        padding-top: 15px;
+        visibility: visible;
+    }
+
+    h2.text-visible {
+        visibility: hidden;
+    }
+}
